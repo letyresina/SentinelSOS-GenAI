@@ -46,6 +46,21 @@ O objetivo do Sentinel SOS é auxiliar na prevenção e monitoramento de eventos
 
 ---
 
+# 💻 Desenvolvimento no Google Colab
+
+Todo o pipeline de desenvolvimento do projeto foi construído inicialmente utilizando o **Google Colab**, permitindo:
+
+- coleta e processamento dos dados;
+- treinamento dos modelos de Machine Learning;
+- geração de gráficos e métricas;
+- análise SHAP;
+- exportação do modelo treinado;
+- testes do Streamlit.
+
+O uso do Colab possibilitou maior facilidade na prototipação e integração das etapas do pipeline de Inteligência Artificial.
+
+---
+
 # 📡 Fonte dos Dados
 
 Os dados utilizados no projeto são provenientes da NASA POWER API.
@@ -205,21 +220,14 @@ Usuário → Streamlit → NASA POWER API → Feature Engineering → XGBoost �
 ```bash
 SentinelSOS/
 
+├── notebook/
+│
+├── README.md
 ├── app.py
-├── sentinel_sos_xgboost.pkl
+├── requirements.txt
 ├── sentinel_sos_features.csv
 ├── sentinel_sos_raw.csv
-├── requirements.txt
-├── README.md
-├── notebooks/
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── models/
-│
-└── images/
+└── sentinel_sos_xgboost.pkl
 ```
 
 ---
@@ -324,21 +332,15 @@ O projeto foi desenvolvido inicialmente utilizando:
 
 ---
 
-# 🔗 Exemplo de Deploy Temporário
+# 🚀 Deploy Streamlit Cloud
+
+A aplicação pode ser hospedada permanentemente utilizando o Streamlit Community Cloud.
+
+Após o deploy, a aplicação ficará disponível em um link fixo semelhante a:
 
 ```txt
-https://nintendo-headpiece-conflict.ngrok-free.dev
+https://sentinelsos.streamlit.app
 ```
-
----
-
-# 🚀 Sugestões de Deploy Permanente
-
-Para disponibilização permanente da aplicação, recomenda-se:
-
-- Streamlit Community Cloud
-- Render
-- Hugging Face Spaces
 
 ---
 
@@ -349,6 +351,7 @@ Para disponibilização permanente da aplicação, recomenda-se:
 - XGBoost Documentation
 - SHAP Documentation
 - Streamlit Documentation
+- Google Colab Documentation
 
 ---
 
